@@ -1403,16 +1403,15 @@ async function compartirVehiculo(id){
 }
 
 function limpiarURLVehiculo(){
-  const url=new URL(location.href);
-  url.searchParams.delete('vehiculo');
-  url.hash='';
-  history.replaceState(null,'',url.pathname+(url.search?url.search:''));
+  const base=location.pathname.replace(/\/index\.html$/,'/');
+  history.replaceState(null,'',base);
 }
 
 function cerrar(id){
   document.getElementById(id).classList.remove('on');
   if(id==='ov-ficha'&&fichaDesdeDeepLink){
     fichaDesdeDeepLink=false;
+    deepLinkAbierto=false;
     limpiarURLVehiculo();
     goSec('inicio',document.querySelector('#nav .nb'));
   }
