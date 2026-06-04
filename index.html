@@ -719,7 +719,9 @@ body{background:linear-gradient(180deg,#f7f9fb 0%,var(--isaac-bg) 42%,#edf1f5 10
 .ficha-price-lbl{font-size:10px!important;color:rgba(255,255,255,.76)!important;text-transform:uppercase!important;letter-spacing:1.6px!important;margin-top:4px!important}
 .ficha-ctas{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;margin-bottom:16px!important}
 .ficha-wa{background:#25d366!important;color:#fff!important;border:none!important;border-radius:12px!important;padding:14px 16px!important;font-size:13px!important;font-weight:800!important;letter-spacing:.7px!important;text-transform:uppercase!important;box-shadow:0 12px 22px rgba(37,211,102,.20)!important}
-.ficha-share{background:#fff!important;color:#1d2228!important;border:1px solid rgba(20,23,27,.16)!important;border-radius:12px!important;padding:13px 16px!important;font-size:12px!important;font-weight:800!important;letter-spacing:.7px!important;text-transform:uppercase!important}
+.ficha-share{background:#1d2228!important;color:#fff!important;border:1px solid rgba(181,18,27,.62)!important;border-radius:12px!important;padding:13px 16px!important;font-size:12px!important;font-weight:800!important;letter-spacing:.7px!important;text-transform:uppercase!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;box-shadow:0 10px 22px rgba(20,23,27,.18)!important;transition:background .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease!important}
+.ficha-share:hover{background:#b5121b!important;color:#fff!important;border-color:#b5121b!important;box-shadow:0 12px 24px rgba(181,18,27,.24)!important;transform:translateY(-1px)!important}
+.share-ico{font-size:15px!important;line-height:1!important;display:inline-block!important;transform:translateY(-1px)!important}
 .ficha-specs{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin-bottom:16px!important}
 .ficha-spec{background:#f8fafc!important;border:1px solid rgba(20,23,27,.10)!important;border-radius:12px!important;padding:13px!important;text-align:center!important}
 .ficha-spec-v{font-size:1rem!important;font-weight:750!important;color:#1d2228!important;line-height:1.15!important}
@@ -1267,7 +1269,7 @@ function verFicha(id){
     </div>
     <div class="ficha-ctas">
       <button class="ficha-wa" onclick="consultarWA('${id}')">Consultar por WhatsApp</button>
-      <button class="ficha-share" onclick="compartirVehiculo('${id}')">Compartir vehículo</button>
+      <button class="ficha-share" onclick="compartirVehiculo('${id}')"><span class="share-ico" aria-hidden="true">↗</span>Compartir vehículo</button>
     </div>
     <div class="ficha-specs">
       <div class="ficha-spec"><div class="ficha-spec-v">${a.anio||'—'}</div><div class="ficha-spec-l">Año</div></div>
